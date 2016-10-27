@@ -66,15 +66,15 @@ beforeEach(function () {
   describe ("Ask Energy usage", function () {
     it ('it allows to ask about the current energy usage for low', function (){
       thermostat.temperature = 12
-        expect(thermostat.energyUsage ()).toEqual("Low usage")
+        expect(thermostat.energyUsage ()).toEqual("low_usage")
     });
     it ('it allows to ask about the current energy usage for medium', function (){
       thermostat.temperature = 22
-        expect(thermostat.energyUsage ()).toEqual("Medium usage")
+        expect(thermostat.energyUsage ()).toEqual("medium_usage")
     });
     it ('it allows to ask about the current energy usage for high', function (){
       thermostat.temperature = 26
-        expect(thermostat.energyUsage ()).toEqual("High usage")
+        expect(thermostat.energyUsage ()).toEqual("high_usage")
     });
 
     describe ("switchMode", function () {

@@ -1,79 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="../jquery/jquery.js"></script>
-    <script src="../jquery/interface.js"></script>
-    <link rel="stylesheet" href="../public/reset.css" />
-    <link rel="stylesheet" href="../public/css/style.css" />
-    <script src="../src/thermostat.js"></script>
-    <meta charset="utf-8">
-    <title>Thermostat</title>
+<head>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="../jquery/jquery.js"></script>
+  <script src="../jquery/interface.js"></script>
+  <link rel="stylesheet" href="../public/reset.css" />
+  <link rel="stylesheet" href="../public/css/style.css" />
+  <script src="../src/thermostat.js"></script>
+  <meta charset="utf-8">
+  <title>Thermostat</title>
 
-  </head>
+</head>
 
-  <body>
-  <div class="thermostat" id="screen" >
+<body>
 
+  <div class="thermostat" >
 
+    <div class="inner_box" >
 
-        <div class="temperature">
-          20 °C
-        </div>
+      <div class="gauge">
+        <h1 id="temperature"></h1>
+      </div>
 
-        <div class="power_saving">
-          Power Saving mode ON
-        </div>
+      <div class="power_saving">
+        <p id="mode">ECO</p>
+      </div>
 
-        <div class="usage">
-          medium-usage
-        </div>
+      <!-- <div class="usage">
+        medium-usage
+      </div> -->
 
-        <div class="temp_change">
+      <div class="temp_change">
+          <button id="up" type="button" value="up">UP</button>
+          <button id="down" type="button" value="down">DOWN</button>
+      </div>
 
-          <div class="up">
-            <button type="button" value="up">UP</button>
-          </div>
+      <div class="buttons">
+          <button id="eco" type="button" name="eco">Eco</button>
+          <button id="reset" type="button" name="reset">Reset</button>
+          <!-- <form action="http://www.google.com" >
+            <button id="power" type="submit" name="power">Power</button>
+          </form> -->
+      </div>
 
-          <div class="down">
-            <button type="button" value="down">DOWN</button>
-          </div>
+      </div>
 
-        </div>
-
-        <div class="buttons">
-
-          <div class="eco">
-            <button type="button" name="eco">eco</button>
-          </div>
-
-          <div class="reset">
-            <button type="button" name="reset">reset</button>
-          </div>
-
-          <div class="power">
-            <form action="http://www.google.com" >
-              <button type="submit" name="power">POWER</button>
-            </form>
-
-        </div>
-        </div>
-
-
-
-    </div>
-
-    <div>
-      <p class="weather_forcast"></p>
-      <select id="weather">
-        <option value="London">London</option>
-        <option value="Manchester">Manchester</option>
-        <option value="Brighton">Brighton</option>
-      </select>
+      <div class="forcast">
+        <p class="weather_forcast"></p>
+        <select id="weather">
+          <option value="London">London</option>
+          <option value="Manchester">Manchester</option>
+          <option value="Brighton">Brighton</option>
+        </select>
       </form>
     </div>
 
-  </body>
+    </div>
+
+  </div>
+
+
+
+</body>
 </html>
 
 <!-- img src="http://s18.postimg.org/nwgb93zc9/down.png" -->

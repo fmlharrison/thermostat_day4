@@ -1,47 +1,73 @@
-/*.thermostat {
-  border: 1px solid red;
-  background-image: url("https://i.imgsafe.org/21fbdcfc5f.png");
-  background-repeat: no-repeat;
-  width: 50vw;
-  background-size: cover;
-
-}*/
-@font-face {
-font-family: 'Calculator';
-src: url('fonts/Calculator.eot');
-src:
-    local('Calculator'),
-    local('Calculator'),
-    url('Calculator.otf')''
-    format('opentype');
-}
 .thermostat {
- font-family: 'Calculator';
- color: #00ef00;
-
-}
-.thermostat {
-  background:  linear-gradient(to right, rgba(138,134,130,1) 0%, rgba(230,230,230,1) 97%, rgba(230,230,230,1) 100%);
-  width: 40vw;
-  height: 50vw;
+  background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -300px;
+  /*border: 1px solid red;*/
+  text-align: center;
   border-radius: 50%;
-  padding: 2.5vw;
 }
 
-#screen {
-  background: linear-gradient(to right, rgba(120,115,109,1) 0%, rgba(5,5,5,1) 66%, rgba(5,5,5,1) 100%);
- width: 50vw;
- height: 50vw;
- border-radius: 50%;
+.inner_box {
+  background: linear-gradient(to bottom, #383838 0%,#000000 100%);
+  /*border: 1px solid green;*/
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
 }
-.temperature {
-  margin-left: 20vw;
-  margin-top: 10vw;
-   font-size: 4vw;
+
+.temp_change, .forcast  {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.temp_change {
+  display: inline-block;
+}
+
+.buttons {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.gauge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .power_saving {
-  font-family: 'Calculator';
-  color: #00ef00;
-  font-size: 2vw;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: green;
+}
+
+.low_usage {
+  color: green;
+  font-size: 70px;
+}
+
+.medium_usage {
+  color: white;
+  font-size: 70px;
+}
+
+.high_usage {
+  color: red;
+  font-size: 70px;
 }

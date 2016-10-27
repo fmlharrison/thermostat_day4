@@ -40,12 +40,12 @@ Thermostat.prototype.switchMode = function () {
 
 Thermostat.prototype.energyUsage = function () {
   if (this.temperature < 18) {
-    return "Low usage"
+    return "low_usage"
   }
   else if ((this.temperature >= 18) && (this.temperature < 25)) {
-    return "Medium usage"
+    return "medium_usage"
   }
   else {
-    return "High usage"
+    return "high_usage"
   }
 };

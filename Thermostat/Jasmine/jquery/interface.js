@@ -8,36 +8,42 @@ $( document ).ready(function(){
     $(".weather_forcast").text("Current temperature in " + city + ": " + result.main.temp + " °C");
     event.preventDefault();
   });
-});
+  });
 
-  $(".up").click(function () {
+  temperatureCheck();
+
+  $("#up").click(function () {
     thermostat.up();
-    $(".usage").text(thermostat.energyUsage());
-    $(".temperature").text(thermostat.temperature + " °C");
+    temperatureCheck();
   });
 
-  $(".down").click(function () {
+  $("#down").click(function () {
     thermostat.down();
-    $(".usage").text(thermostat.energyUsage());
-    $(".temperature").text(thermostat.temperature + " °C");
+    temperatureCheck();
   });
 
-  $(".eco").click(function () {
+  $("#eco").click(function () {
     thermostat.switchMode();
     if (thermostat.powerSaving == true) {
-      $(".power_saving").text("Power Saving mode ON");
+      $("#mode").css("color", "green")
     }
     else {
-      $(".power_saving").text("Power Saving mode OFF");
+      $("#mode").css("color", "red")
     }
   });
 
-  $(".reset").click(function () {
+  $("#reset").click(function () {
     thermostat.resetTemp();
-    $(".temperature").text(thermostat.temperature + " °C");
+    temperatureCheck();
   });
 
-  $(".power").click(function () {
-    alert ("Thermostat is switching off, good bye");
-  });
+  // $("#power").click(function () {
+  //   alert ("Thermostat is switching off, good bye");
+  // });
+
+  function temperatureCheck () {
+    $("#temperature").text(thermostat.temperature + " °C");
+    $(".usage").text(thermostat.energyUsage());
+    $("#temperature").attr('class', thermostat.energyUsage());
+  };
 });
